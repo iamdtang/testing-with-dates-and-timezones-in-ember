@@ -15,4 +15,3 @@ cache:
 
 before_install:
   - npm config set spin false
-  - export TZ=America/Los_Angeles
