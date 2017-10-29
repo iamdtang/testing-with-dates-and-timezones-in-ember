@@ -14,11 +14,20 @@ moduleForComponent('date-range-picker', 'Integration | Component | date range pi
   }
 });
 
-test('onchange is invoked with the from and to dates when Last 7 days is clicked', function(assert) {
+// test('onchange is invoked with the from and to dates when Last 7 days is clicked', function(assert) {
+//   let handleChange = this.set('handleChange', sinon.spy());
+//   this.render(hbs`{{date-range-picker onchange=handleChange}}`);
+//   click('#last-7-days');
+//   let [ from, to ] = handleChange.getCall(0).args;
+//   assert.equal(from, '2017-10-22');
+//   assert.equal(to, '2017-10-28');
+// });
+
+test('onchange is invoked with the from and to dates in UTC when Last 7 days is clicked', function(assert) {
   let handleChange = this.set('handleChange', sinon.spy());
   this.render(hbs`{{date-range-picker onchange=handleChange}}`);
   click('#last-7-days');
   let [ from, to ] = handleChange.getCall(0).args;
-  assert.equal(from, '2017-10-22');
-  assert.equal(to, '2017-10-28');
+  assert.equal(from, '2017-10-22T07:00:00.000Z');
+  assert.equal(to, '2017-10-29T06:59:59.999Z');
 });
