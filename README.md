@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/skaterdav85/testing-with-dates-and-timezones-in-ember.svg?branch=master)](https://travis-ci.org/skaterdav85/testing-with-dates-and-timezones-in-ember)
+
 # testing-dates-in-ember
 
 This README outlines the details of collaborating on this Ember application.
