@@ -7,7 +7,8 @@ import { freezeDateAt, unfreezeDate } from 'ember-mockdate-shim';
 moduleForComponent('date-range-picker', 'Integration | Component | date range picker', {
   integration: true,
   beforeEach() {
-    freezeDateAt(new Date(2017, 9, 29, 5, 14, 36)); // Oct 29th, 2017 5:14:36
+    let timezoneOffsetMinutes = 60 * 7;
+    freezeDateAt(new Date(2017, 9, 29, 5, 14, 36), timezoneOffsetMinutes); // Oct 29th, 2017 5:14:36
   },
   afterEach() {
     unfreezeDate();
